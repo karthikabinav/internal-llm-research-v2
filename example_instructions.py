@@ -7,6 +7,7 @@ import fire
 
 from llama import Llama
 
+
 def main(
     ckpt_dir: str,
     tokenizer_path: str,
@@ -56,9 +57,9 @@ def main(
 
     for instruction, result in zip(instructions, results):
         for msg in instruction:
-            print(f"{msg[role].capitalize()}: {msg[content]}\n")
+            print(f"{msg['role'].capitalize()}: {msg['content']}\n")
         print(
-            f"> {result[generation][role].capitalize()}: {result[generation][content]}"
+            f"> {result['generation']['role'].capitalize()}: {result['generation']['content']}"
         )
         print("\n==================================\n")
 
