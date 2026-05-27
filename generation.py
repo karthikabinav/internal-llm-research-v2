@@ -501,7 +501,6 @@ def infilling_prompt_tokens(
             + [tokenizer.middle_id]
         )
 
-
 def dialog_prompt_tokens(tokenizer: Tokenizer, dialog: Dialog) -> List[int]:
     """
     Prompt formatting for multi-turn dialogs.
